@@ -1,0 +1,136 @@
+{
+  "vue-init": {
+    "scope": "vue",
+    "prefix": "vinit",
+    "body": [
+      "<template lang=\"pug\">",
+      "$0",
+      "</template>",
+      "",
+      "<script>",
+      "export default {",
+      "  name: '${1:NewComponent}',",
+      "}",
+      "</script>",
+      "",
+      "<style lang=\"less\" scoped>",
+      "",
+      "</style>",
+    ],
+    "description": "vue init(pug + less)"
+  },
+  "vue-html": {
+    "scope": "vue",
+    "prefix": "vhtml",
+    "body": [
+      "<template>",
+      "$0",
+      "</template>",
+    ],
+    "description": "vue html"
+  },
+  "vue-pug": {
+    "scope": "vue",
+    "prefix": "vpug",
+    "body": [
+      "<template lang=\"pug\">",
+      "$0",
+      "</template>",
+    ],
+    "description": "vue pug"
+  },
+  "vue-js": {
+    "scope": "vue",
+    "prefix": "vjs",
+    "body": [
+      "<script>",
+      "export default {",
+      "  name: '${0:NewComponent}',",
+      "}",
+      "</script>",
+    ],
+    "description": "vue javascript"
+  },
+  "vue-js-all": {
+    "scope": "vue",
+    "prefix": "vjsall",
+    "body": [
+      "<script>",
+      "export default {",
+      "  name: '${0:NewComponent}',",
+      "  data() {},",
+      "  computed: {},",
+      "  mounted() {},",
+      "  methods: {},",
+      "}",
+      "</script>",
+    ],
+    "description": "vue javascript all options"
+  },
+  "vue-css": {
+    "scope": "vue",
+    "prefix": "vcss",
+    "body": [
+      "<style>",
+      "$0",
+      "</style>",
+    ],
+    "description": "vue css"
+  },
+  "vue-css-scoped": {
+    "scope": "vue",
+    "prefix": "vcss",
+    "body": [
+      "<style scoped>",
+      "$0",
+      "</style>",
+    ],
+    "description": "vue css scoped"
+  },
+  "vue-less": {
+    "scope": "vue",
+    "prefix": "vless",
+    "body": [
+      "<style lang=\"less\">",
+      "$0",
+      "</style>",
+    ],
+    "description": "vue less"
+  },
+  "vue-less-scoped": {
+    "scope": "vue",
+    "prefix": "vlessscoped",
+    "body": [
+      "<style lang=\"less\" scoped>",
+      "$0",
+      "</style>",
+    ],
+    "description": "vue less scoped"
+  },
+  "vue-sass": {
+    "scope": "vue",
+    "prefix": [
+      "vsass",
+      "vscss"
+    ],
+    "body": [
+      "<style lang=\"scss\">",
+      "$0",
+      "</style>",
+    ],
+    "description": "vue sass"
+  },
+  "vue-sass-scoped": {
+    "scope": "vue",
+    "prefix": [
+      "vsassscoped",
+      "vscssscoped"
+    ],
+    "body": [
+      "<style lang=\"scss\" scoped>",
+      "$0",
+      "</style>",
+    ],
+    "description": "vue sass scoped"
+  },
+}

@@ -1,0 +1,692 @@
+{
+  "page-content": {
+    "scope": "jade",
+    "prefix": ".page-content",
+    "body": [
+      ".page-content",
+      "  .page-header",
+      "    .page-header__title ${1:pageTitle}",
+      "    .page-header__right",
+      "      router-link.el-button.el-button--primary.el-button--mini.is-plain(",
+      "        tag=\"button\",",
+      "        :to=\"{name: '${2:add}'}\",",
+      "        v-acl=\"${3:'add'}\")",
+      "        ${4:i.el-icon-plus}",
+      "        | ${5:新增}"
+    ],
+    "description": "@pugTemplate .page-content"
+  },
+  "page-header": {
+    "scope": "jade",
+    "prefix": ".page-header",
+    "body": [
+      ".page-header",
+      "  .page-header__title ${1:pageTitle}",
+      "  .page-header__right",
+      "    router-link.el-button.el-button--primary.el-button--mini.is-plain(",
+      "      tag=\"button\",",
+      "      :to=\"{name: '${2:add}'}\",",
+      "      v-acl=\"${3:'add'}\")",
+      "      ${4:i.el-icon-plus}",
+      "      | ${5:新增}"
+    ],
+    "description": "@pugTemplate .page-header"
+  },
+  "page-header__title": {
+    "scope": "jade",
+    "prefix": ".page-header__title",
+    "body": [".page-header__title ${1:pageTitle}"],
+    "description": "@pugTemplate .page-header__title"
+  },
+  "page-header__right": {
+    "scope": "jade",
+    "prefix": ".page-header__right",
+    "body": [
+      ".page-header__right",
+      "  router-link.el-button.el-button--primary.el-button--mini.is-plain(",
+      "    tag=\"button\",",
+      "    :to=\"{name: '${2:add}'}\",",
+      "    v-acl=\"${3:'add'}\")",
+      "    ${4:i.el-icon-plus}",
+      "    | ${5:新增}"
+    ],
+    "description": "@pugTemplate .page-header__right"
+  },
+  "page-header1": {
+    "scope": "jade",
+    "prefix": "page-header",
+    "body": ["page-header(title=\"${1:page-title}\")"],
+    "description": "@components page-header1"
+  },
+  "page-header2": {
+    "scope": "jade",
+    "prefix": "page-header",
+    "body": [
+      "page-header(title=\"${1:pageTitle}\" :tooltipAttrs=\"${2:TOOLTIP}\" :fullscreen=\"${3:true}\")"
+    ],
+    "description": "@components page-header2"
+  },
+  "upload-file": {
+    "scope": "jade",
+    "prefix": "upload-file",
+    "body": [
+      "upload-file(",
+      "  ref=\"${1:uploadFile}\",",
+      "  label=\"$2\"",
+      "  v-model=\"$3\",",
+      "  :tips=\"${4:tips}\",",
+      "  :tableData=\"${5:tableData}\",",
+      "  exampleFileName=\"${6:上传文件模板.xlsx}\",",
+      "  exampleFilePath=\"/${7:upload_example.xlsx}\")"
+    ],
+    "description": "@components upload-file"
+  },
+  "submit-btn": {
+    "scope": "jade",
+    "prefix": "submit-btn",
+    "body": ["submit-btn(:submit=\"${1:onSubmit}\") ${2:确定}"],
+    "description": "@components submit-btn"
+  },
+  "el-select": {
+    "scope": "jade",
+    "prefix": "el-select",
+    "body": [
+      "el-select(v-model=\"$1\", placeholder=\"${2:请选择}\", ${3:clearable}, ${4:filterable})",
+      "  el-option(",
+      "    v-for=\"${6:item} in ${5:options}\", :key=\"${6:item}.${7:id}\",",
+      "    :label=\"${6:item}.${8:label}\",",
+      "    :value=\"${6:item}.${9:value}\")"
+    ],
+    "description": "@components el-select"
+  },
+  "el-tooltip": {
+    "scope": "jade",
+    "prefix": "el-tooltip",
+    "body": [
+      "el-tooltip(effect=\"${1:dark}\", placement=\"${2:bottom-start}\")",
+      "  span(slot=\"content\") ${3:这是一条提示信息。}",
+      "  ${4:i.el-icon-question}"
+    ],
+    "description": "@components el-tooltip"
+  },
+  "gt-input": {
+    "scope": "jade",
+    "prefix": "gt-input",
+    "body": [
+      "gt-input(label=\"$1\", v-model=\"$2\", prop=\"$3\", :maxlength=\"${4:20}\")"
+    ],
+    "description": "@components gt-input"
+  },
+  "baidu-map": {
+    "scope": "jade",
+    "prefix": "baidu-map",
+    "body": [
+      "baidu-map(",
+      "  :center=\"${1:center}\",",
+      "  :zoom=\"${2:18}\",",
+      "  :max-zoom=\"18\"",
+      "  :scroll-wheel-zoom=\"true\"",
+      "  @ready=\"${4:onMapReady}\")"
+    ],
+    "description": "@components baidu-map"
+  },
+  "icon": {
+    "scope": "jade",
+    "prefix": "icon",
+    "body": ["icon(:name=\"$1\")"],
+    "description": "@components icon"
+  },
+  "gt-table-pagination1": {
+    "scope": "jade",
+    "prefix": "gt-table-pagination",
+    "body": [
+      "gt-table-pagination(",
+      "  :tableOption=\"${1:tableOption}\",",
+      "  :query.sync=\"${2:query}\"",
+      "  @init=\"${3:onTableInit}\"",
+      ")"
+    ],
+    "description": "@components gt-table-pagination1"
+  },
+  "echarts": {
+    "scope": "jade",
+    "prefix": "echarts",
+    "body": [
+      "echarts(",
+      "  :option=\"${1:echartsOptions}\",",
+      "  @done=\"${2:onSetOptionDone}\",",
+      "  @chart-init=\"${3:onChartInit}\"",
+      ")"
+    ],
+    "description": "@components echarts"
+  },
+  "date-picker": {
+    "scope": "jade",
+    "prefix": "date-picker",
+    "body": [
+      "date-picker(",
+      "  :query.sync=\"${1:query}\",",
+      "  :disabledStartDate=\"${2:disabledStartDate}\",",
+      "  :disabledEndDate=\"${3:disabledEndDate}\"",
+      ")"
+    ],
+    "description": "@components date-picker"
+  },
+
+  "text-danger": {
+    "scope": "jade",
+    "prefix": ".text-danger",
+    "body": ".text-danger",
+    "description": "@less @danger-color"
+  },
+  "text-error": {
+    "scope": "jade",
+    "prefix": ".text-error",
+    "body": ".text-errorr",
+    "description": "@less @danger-color"
+  },
+  "color-danger": {
+    "scope": "jade",
+    "prefix": ".color-danger",
+    "body": ".color-danger",
+    "description": "@less @danger-color"
+  },
+  "color-error": {
+    "scope": "jade",
+    "prefix": ".color-error",
+    "body": ".color-error",
+    "description": "@less @danger-color"
+  },
+  "color-red": {
+    "scope": "jade",
+    "prefix": ".color-red",
+    "body": ".color-red",
+    "description": "@less @danger-color"
+  },
+  "text-success": {
+    "scope": "jade",
+    "prefix": ".text-success",
+    "body": ".text-success",
+    "description": "@less @success-color"
+  },
+  "color-success": {
+    "scope": "jade",
+    "prefix": ".color-success",
+    "body": ".color-success",
+    "description": "@less @success-color"
+  },
+  "color-green": {
+    "scope": "jade",
+    "prefix": ".color-green",
+    "body": ".color-green",
+    "description": "@less @success-color"
+  },
+  "text-disable": {
+    "scope": "jade",
+    "prefix": ".text-disable",
+    "body": ".text-disable",
+    "description": "@less @disabled-color-base"
+  },
+  "color-disable": {
+    "scope": "jade",
+    "prefix": ".color-disable",
+    "body": ".color-disable",
+    "description": "@less @disabled-color-base"
+  },
+  "color-grey": {
+    "scope": "jade",
+    "prefix": ".color-grey",
+    "body": ".color-grey",
+    "description": "@less @disabled-color-base"
+  },
+  "text-blue": {
+    "scope": "jade",
+    "prefix": ".text-blue",
+    "body": ".text-blue",
+    "description": "@less @light-primary-color"
+  },
+  "text-primary": {
+    "scope": "jade",
+    "prefix": ".text-primary",
+    "body": ".text-primary",
+    "description": "@less @light-primary-color"
+  },
+  "color-primary": {
+    "scope": "jade",
+    "prefix": ".color-primary",
+    "body": ".color-primary",
+    "description": "@less @light-primary-color"
+  },
+  "text-black": {
+    "scope": "jade",
+    "prefix": ".text-black",
+    "body": ".text-black",
+    "description": "@cssColor #000"
+  },
+  "text-warning": {
+    "scope": "jade",
+    "prefix": ".text-warning",
+    "body": ".text-warning",
+    "description": "@less @warning-color"
+  },
+  "color-orange": {
+    "scope": "jade",
+    "prefix": ".color-orange",
+    "body": ".color-orange",
+    "description": "@less @warning-color"
+  },
+  ".multi-ellips-2": {
+    "scope": "jade",
+    "prefix": ".multi-ellips-2",
+    "body": ".multi-ellips-2",
+    "description": "@className .multi-ellips(2)"
+  },
+  ".multi-ellips-3": {
+    "scope": "jade",
+    "prefix": ".multi-ellips-3",
+    "body": ".multi-ellips-3",
+    "description": "@className .multi-ellips(3)"
+  },
+  ".multi-ellips-4": {
+    "scope": "jade",
+    "prefix": ".multi-ellips-4",
+    "body": ".multi-ellips-4",
+    "description": "@className .multi-ellips(4)"
+  },
+  ".multi-ellips-5": {
+    "scope": "jade",
+    "prefix": ".multi-ellips-5",
+    "body": ".multi-ellips-5",
+    "description": "@className .multi-ellips(5)"
+  },
+  ".ellipsis": {
+    "scope": "jade",
+    "prefix": ".ellipsis",
+    "body": ".ellipsis",
+    "description": "@className text-ellipsis"
+  },
+
+  "ft-12": {
+    "scope": "jade",
+    "prefix": ".ft-12",
+    "body": ".ft-12",
+    "description": "@css font-size: 12px;"
+  },
+  "ft-14": {
+    "scope": "jade",
+    "prefix": ".ft-14",
+    "body": ".ft-14",
+    "description": "@css font-size: 14px;"
+  },
+  "ft-16": {
+    "scope": "jade",
+    "prefix": ".ft-16",
+    "body": ".ft-16",
+    "description": "@css font-size: 16px;"
+  },
+  "ft-18": {
+    "scope": "jade",
+    "prefix": ".ft-18",
+    "body": ".ft-18",
+    "description": "@css font-size: 18px;"
+  },
+  "ft-20": {
+    "scope": "jade",
+    "prefix": ".ft-20",
+    "body": ".ft-20",
+    "description": "@css font-size: 20px;"
+  },
+  "ft-30": {
+    "scope": "jade",
+    "prefix": ".ft-30",
+    "body": ".ft-30",
+    "description": "@css font-size: 30px;"
+  },
+  "fr": {
+    "scope": "jade",
+    "prefix": ".fr",
+    "body": ".fr",
+    "description": "@css float: right;"
+  },
+  "fl": {
+    "scope": "jade",
+    "prefix": ".fl",
+    "body": ".fl",
+    "description": "@css float: left;"
+  },
+  "text-left": {
+    "scope": "jade",
+    "prefix": ".text-left",
+    "body": ".text-left",
+    "description": "@css text-align: left;"
+  },
+  "text-right": {
+    "scope": "jade",
+    "prefix": ".text-right",
+    "body": ".text-right",
+    "description": "@css text-align: right;"
+  },
+  "text-center": {
+    "scope": "jade",
+    "prefix": ".text-center",
+    "body": ".text-center",
+    "description": "@css text-align: center;"
+  },
+  "hidden": {
+    "scope": "jade",
+    "prefix": ".hidden",
+    "body": ".hidden",
+    "description": "@css display: none;"
+  },
+
+  "fb": {
+    "scope": "jade",
+    "prefix": ".fb",
+    "body": ".fb",
+    "description": "@css display: flex;"
+  },
+  "fb-row": {
+    "scope": "jade",
+    "prefix": ".fb-row",
+    "body": ".fb-row",
+    "description": ["@css flex-direction: row;", "flex-direction 主轴方向"]
+  },
+  "fb-row-rev": {
+    "scope": "jade",
+    "prefix": ".fb-row-rev",
+    "body": ".fb-row-rev",
+    "description": [
+      "@css flex-direction: row-reverse;",
+      "flex-direction 主轴方向"
+    ]
+  },
+  "fb-col": {
+    "scope": "jade",
+    "prefix": ".fb-col",
+    "body": ".fb-col",
+    "description": ["@css flex-direction: column;", "flex-direction 主轴方向"]
+  },
+  "fb-col-rev": {
+    "scope": "jade",
+    "prefix": ".fb-col-rev",
+    "body": ".fb-col-rev",
+    "description": [
+      "@css flex-direction: column-reverse;",
+      "flex-direction 主轴方向"
+    ]
+  },
+  "fb-nowrap": {
+    "scope": "jade",
+    "prefix": ".fb-nowrap",
+    "body": ".fb-nowrap",
+    "description": [
+      "@css flex-wrap: nowrap; /* 溢出不换行 强制一行，元素同比缩小 */",
+      "flex-wrap 设置溢出换行"
+    ]
+  },
+  "fb-wrap": {
+    "scope": "jade",
+    "prefix": ".fb-wrap",
+    "body": ".fb-wrap",
+    "description": [
+      "@css flex-wrap: wrap; /* 溢出换行 */",
+      "flex-wrap 设置溢出换行"
+    ]
+  },
+  "fb-wrap-rev": {
+    "scope": "jade",
+    "prefix": ".fb-wrap-rev",
+    "body": ".fb-wrap-rev",
+    "description": ["@css flex-wrap: wrap-reverse;", "flex-wrap 设置溢出换行"]
+  },
+  "fb-main-start": {
+    "scope": "jade",
+    "prefix": ".fb-main-start",
+    "body": ".fb-main-start",
+    "description": [
+      "@css justify-content: flex-start;",
+      "justify-content属性定义了项目在主轴上的对齐方式"
+    ]
+  },
+  "fb-main-center": {
+    "scope": "jade",
+    "prefix": ".fb-main-center",
+    "body": ".fb-main-center",
+    "description": [
+      "@css justify-content: center;",
+      "justify-content属性定义了项目在主轴上的对齐方式"
+    ]
+  },
+  "fb-main-end": {
+    "scope": "jade",
+    "prefix": ".fb-main-end",
+    "body": ".fb-main-end",
+    "description": [
+      "@css justify-content: flex-end;",
+      "justify-content属性定义了项目在主轴上的对齐方式"
+    ]
+  },
+  "fb-main-between": {
+    "scope": "jade",
+    "prefix": ".fb-main-between",
+    "body": ".fb-main-between",
+    "description": [
+      "@css justify-content: space-between;",
+      "两端对齐，项目之间的间隔都相等"
+    ]
+  },
+  "fb-main-around": {
+    "scope": "jade",
+    "prefix": ".fb-main-around",
+    "body": ".fb-main-around",
+    "description": [
+      "@css justify-content: space-around;",
+      "每个项目两侧的间隔相等。项目之间的间隔比项目与边框的间隔大一倍"
+    ]
+  },
+  "fb-cross-start": {
+    "scope": "jade",
+    "prefix": ".fb-cross-start",
+    "body": ".fb-cross-start",
+    "description": [
+      "@css align-items: flex-start;",
+      "align-items属性定义项目在交叉轴上如何对齐"
+    ]
+  },
+  "fb-cross-center": {
+    "scope": "jade",
+    "prefix": ".fb-cross-center",
+    "body": ".fb-cross-center",
+    "description": [
+      "@css align-items: center;",
+      "align-items属性定义项目在交叉轴上如何对齐"
+    ]
+  },
+  "fb-cross-end": {
+    "scope": "jade",
+    "prefix": ".fb-cross-end",
+    "body": ".fb-cross-end",
+    "description": [
+      "@css align-items: flex-end;",
+      "align-items属性定义项目在交叉轴上如何对齐"
+    ]
+  },
+  "fb-cross-baseline": {
+    "scope": "jade",
+    "prefix": ".fb-cross-baseline",
+    "body": ".fb-cross-baseline",
+    "description": ["@css align-items: baseline;", "项目的第一行文字的基线对齐"]
+  },
+  "fb-cross-stretch": {
+    "scope": "jade",
+    "prefix": ".fb-cross-stretch",
+    "body": ".fb-cross-stretch",
+    "description": [
+      "@css align-items: stretch;",
+      "如果项目未设置高度或设为auto，将占满整个容器的高度"
+    ]
+  },
+  "item-order-1": {
+    "scope": "jade",
+    "prefix": ".item-order-1",
+    "body": ".item-order-1",
+    "description": [
+      "@css order: 1;",
+      "order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0"
+    ]
+  },
+  "item-order-2": {
+    "scope": "jade",
+    "prefix": ".item-order-2",
+    "body": ".item-order-2",
+    "description": [
+      "@css order: 2;",
+      "order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0"
+    ]
+  },
+  "item-order-3": {
+    "scope": "jade",
+    "prefix": ".item-order-3",
+    "body": ".item-order-3",
+    "description": [
+      "@css order: 3;",
+      "order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0"
+    ]
+  },
+  "item-grow-1": {
+    "scope": "jade",
+    "prefix": ".item-grow-1",
+    "body": ".item-grow-1",
+    "description": [
+      "@css flex-grow: 1;",
+      "flex-grow属性定义项目的放大比例。放大：默认0（即如果有剩余空间也不放大，值为1则放大，2是1的双倍大小，以此类推）"
+    ]
+  },
+  "item-grow-2": {
+    "scope": "jade",
+    "prefix": ".item-grow-2",
+    "body": ".item-grow-2",
+    "description": [
+      "@css flex-grow: 2;",
+      "flex-grow属性定义项目的放大比例。放大：默认0（即如果有剩余空间也不放大，值为1则放大，2是1的双倍大小，以此类推）"
+    ]
+  },
+  "item-shrink-0": {
+    "scope": "jade",
+    "prefix": ".item-shrink-0",
+    "body": ".item-shrink-0",
+    "description": [
+      "@css flex-shrink: 0;",
+      "flex-shrink属性定义了项目的缩小比例。缩小：默认1（如果空间不足则会缩小，值为0不缩小)"
+    ]
+  },
+  "item-basis-120": {
+    "scope": "jade",
+    "prefix": ".item-basis-120",
+    "body": ".item-basis-120",
+    "description": [
+      "@css flex-basis: 120px;",
+      "flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小"
+    ]
+  },
+  "item-flex-1": {
+    "scope": "jade",
+    "prefix": ".item-flex-1",
+    "body": ".item-flex-1",
+    "description": [
+      "@css flex: 1;",
+      "(建议优先使用这个属性)flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto"
+    ]
+  },
+  "item-flex-2": {
+    "scope": "jade",
+    "prefix": ".item-flex-2",
+    "body": ".item-flex-2",
+    "description": [
+      "@css flex: 2;",
+      "(建议优先使用这个属性)flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto"
+    ]
+  },
+  "item-self-start": {
+    "scope": "jade",
+    "prefix": ".item-self-start",
+    "body": ".item-self-start",
+    "description": [
+      "@css align-self: flex-start; ",
+      "align-self 属性允许单个项目有与其他项目不一样的对齐方式。可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch"
+    ]
+  },
+  "item-self-center": {
+    "scope": "jade",
+    "prefix": ".item-self-center",
+    "body": ".item-self-center",
+    "description": [
+      "@css align-self: center; ",
+      "align-self 属性允许单个项目有与其他项目不一样的对齐方式。可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch"
+    ]
+  },
+  "item-self-end": {
+    "scope": "jade",
+    "prefix": ".item-self-end",
+    "body": ".item-self-end",
+    "description": [
+      "@css align-self: flex-end; ",
+      "align-self 属性允许单个项目有与其他项目不一样的对齐方式。可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch"
+    ]
+  },
+  "item-self-baseline": {
+    "scope": "jade",
+    "prefix": ".item-self-baseline",
+    "body": ".item-self-baseline",
+    "description": [
+      "@css align-self: baseline; ",
+      "align-self 属性允许单个项目有与其他项目不一样的对齐方式。可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch"
+    ]
+  },
+  "item-self-stretch": {
+    "scope": "jade",
+    "prefix": ".item-self-stretch",
+    "body": ".item-self-stretch",
+    "description": [
+      "@css align-self: stretch; ",
+      "align-self 属性允许单个项目有与其他项目不一样的对齐方式。可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch"
+    ]
+  },
+
+  "v-acl": {
+    "scope": "jade",
+    "prefix": "v-acl",
+    "body": "v-acl=\"$1\"",
+    "description": "@directive v-acl"
+  },
+  "v-copy": {
+    "scope": "jade",
+    "prefix": "v-copy",
+    "body": ["v-copy"],
+    "description": ["@directive v-copy", "单击复制"]
+  },
+  "v-copy.dblclick": {
+    "scope": "jade",
+    "prefix": "v-copy.dblclick",
+    "body": ["v-copy.dblclick"],
+    "description": ["@directive v-copy", "双击复制"]
+  },
+  "v-copy.icon1": {
+    "scope": "jade",
+    "prefix": "v-copy.icon",
+    "body": ["v-copy.icon"],
+    "description": ["@directive v-copy", "单击 icon 复制"]
+  },
+  "v-copy.icon2": {
+    "scope": "jade",
+    "prefix": "v-copy.icon=",
+    "body": ["v-copy.icon=\"$1\""],
+    "description": ["@directive v-copy", "指定复制的值"]
+  },
+  "v-copy:onSuccess.icon": {
+    "scope": "jade",
+    "prefix": "v-copy:onSuccess.icon",
+    "body": ["v-copy:onSuccess.icon"],
+    "description": ["@directive v-copy", "有成功回调的复制"]
+  }
+}

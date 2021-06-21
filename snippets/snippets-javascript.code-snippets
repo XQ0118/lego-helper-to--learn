@@ -1,0 +1,228 @@
+{
+  "chunk-import": {
+    "scope": "javascript",
+    "prefix": "chunkimport",
+    "body": [
+      "() => import(/* webpackChunkName: \"${1:name}\" */ './${2:index.vue}')"
+    ],
+    "description": "webpack chunk import"
+  },
+  "genPostReq": {
+    "scope": "javascript",
+    "prefix": "genPostReq",
+    "body": ["genPostReq = url => (...params) => axios.post(url, ...params)"],
+    "description": "@lego/js genPostReq"
+  },
+  "$isPermitted": {
+    "scope": "javascript",
+    "prefix": "$isPermitted",
+    "body": ["\\$isPermitted($1)"],
+    "description": "@lego/js $isPermitted"
+  },
+  "$loginInfo": {
+    "scope": "javascript",
+    "prefix": "$loginInfo",
+    "body": ["\\$loginInfo"],
+    "description": "@lego/js $loginInfo"
+  },
+  "$checkIdcardPrivilege": {
+    "scope": "javascript",
+    "prefix": "$checkIdcardPrivilege",
+    "body": [
+      "\\$checkIdcardPrivilege({",
+      "  eventId: $1,",
+      "  query_ids: $2,",
+      "  idcard: $3,",
+      "})"
+    ],
+    "description": "@lego/js $checkIdcardPrivilege"
+  },
+  "$goProfile": {
+    "scope": "javascript",
+    "prefix": "$goProfile",
+    "body": [
+      "\\$goProfile(",
+      "  id: $1,",
+      "  type: $2,",
+      "  from: $3,",
+      "  isSingleRecord: $4,",
+      "  fromHomeSearch: $5,",
+      "  outOfRecord: $6,",
+      ")"
+    ],
+    "description": [
+      "@lego/js $goProfile",
+      "({ id: string, type: string, redirect: string = '', from: number = 1, /* 判断查询类型 1:全息搜索；2:换卡换机；3:同网关联 */ isSingleRecord: boolean = false, /* 不走全局事由逻辑，重新选择绑定事由，不影响全局事由 */ fromHomeSearch: boolean = false, /* 从全息首页搜索不开新页面 */ outOfRecord: boolean = false, /* 全息页面是否弹出案外提示 */ })"
+    ]
+  },
+  "$goReport": {
+    "scope": "javascript",
+    "prefix": "$goReport",
+    "body": [
+      "\\$goReport(",
+      "  id: $1,",
+      "  type: $2,",
+      "  from: $3,",
+      "  isSingleRecord: $4,",
+      "  fromHomeSearch: $5,",
+      "  outOfRecord: $6,",
+      ")"
+    ],
+    "description": [
+      "@lego/js $goReport",
+      "({ id: string, type: string, redirect: string = '', from: number = 1, /* 判断查询类型 1:全息搜索；2:换卡换机；3:同网关联 */ isSingleRecord: boolean = false, /* 不走全局事由逻辑，重新选择绑定事由，不影响全局事由 */ fromHomeSearch: boolean = false, /* 从全息首页搜索不开新页面 */ outOfRecord: boolean = false, /* 全息页面是否弹出案外提示 */ })"
+    ]
+  },
+  "$config": {
+    "scope": "javascript",
+    "prefix": "$config",
+    "body": ["\\$config"],
+    "description": "@lego/js $config"
+  },
+  "$trackEvent": {
+    "scope": "javascript",
+    "prefix": "$trackEvent",
+    "body": ["\\$trackEvent"],
+    "description": "@lego/js $trackEvent"
+  },
+  "$trackSiteSearch": {
+    "scope": "javascript",
+    "prefix": "$trackSiteSearch",
+    "body": ["\\$trackSiteSearch"],
+    "description": "@lego/js $trackSiteSearch"
+  },
+  "$matomo": {
+    "scope": "javascript",
+    "prefix": "$matomo",
+    "body": ["\\$matomo"],
+    "description": "@lego/js $matomo"
+  },
+  "onTableInit": {
+    "scope": "javascript",
+    "prefix": ["onTableInit", "onInitTable", "initTable"],
+    "body": [
+      "onTableInit (${1:tableInstance}) {",
+      "  this.${1:tableInstance} = ${1:tableInstance}",
+      "}"
+    ],
+    "description": "@lego/js onTableInit"
+  },
+  "tableOption": {
+    "scope": "javascript",
+    "prefix": "tableOption",
+    "body": [
+      "tableOption: {",
+      "  columns: [",
+      "    {",
+      "      label: '序号',",
+      "      type: 'index',",
+      "    },",
+      "    {",
+      "      label: '${1:姓名}',",
+      "      prop: '${2:name}',",
+      "    },",
+      "  ],",
+      "  fetch: ${3:api.getTableList}",
+      "},"
+    ],
+    "description": "@lego/js tableOption"
+  },
+  "columns": {
+    "scope": "javascript",
+    "prefix": "columns",
+    "body": [
+      "columns: [",
+      "  {",
+      "    label: '序号',",
+      "    type: 'index',",
+      "  },",
+      "  {",
+      "    label: '${1:姓名}',",
+      "    prop: '${2:name}',",
+      "  },",
+      "]"
+    ],
+    "description": "@lego/js tableColumns"
+  },
+  "column": {
+    "scope": "javascript",
+    "prefix": "column",
+    "body": ["{", "  label: '$1',", "  prop: '$2',", "}"],
+    "description": "@lego/js tableColumnItem"
+  },
+  "actions": {
+    "scope": "javascript",
+    "prefix": "actions",
+    "body": [
+      "actions: [",
+      "  {",
+      "    label: '$1',",
+      "    click: row => {",
+      "      $0",
+      "    }",
+      "  },",
+      "],"
+    ],
+    "description": "@lego/js tableActions"
+  },
+  "action": {
+    "scope": "javascript",
+    "prefix": "action",
+    "body": ["{", "  label: '$1',", "  click: row => {", "    $0", "  }", "},"],
+    "description": "@lego/js tableActionItem"
+  },
+  "formatter": {
+    "scope": "javascript",
+    "prefix": "formatter:",
+    "body": ["formatter: row => {", "  $0", "},"],
+    "description": "@lego/js columnFormatter"
+  },
+  "show-overflow-tooltip": {
+    "scope": "javascript",
+    "prefix": "show-overflow-tooltip",
+    "body": ["'show-overflow-tooltip': ${1:true},"],
+    "description": "@lego/js show-overflow-tooltip"
+  },
+  "auth": {
+    "scope": "javascript",
+    "prefix": "auth:",
+    "body": ["auth: $0,"],
+    "description": "@lego/js columnAuth"
+  },
+  "access": {
+    "scope": "javascript",
+    "prefix": "access:",
+    "body": ["access: $0,"],
+    "description": "@lego/js columnAccess"
+  },
+  "enums": {
+    "scope": "javascript",
+    "prefix": "enums:",
+    "body": [
+      "enums: [",
+      "  {",
+      "    label: '${1:待审核}',",
+      "    value: ${2:0},",
+      "    class: '${3:text-blue}',",
+      "  },",
+      "  {",
+      "    label: '${4:已审核}',",
+      "    value: ${5:1},",
+      "    class: '${6:text-success}',",
+      "  },",
+      "  {",
+      "    label: '${7:审核不通过}',",
+      "    value: ${8:2},",
+      "    class: '${9:text-danger}',",
+      "  },",
+      "],"
+    ],
+    "description": "@lego/js columnEnums"
+  },
+  "import-api": {
+    "scope": "javascript",
+    "prefix": "api",
+    "body": "import api from '@self/data/api'",
+    "description": "@lego/js import api"
+  }
+}

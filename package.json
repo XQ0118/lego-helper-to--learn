@@ -1,0 +1,34 @@
+{
+  "name": "lego-helper",
+  "displayName": "lego-helper",
+  "description": "一个帮助你提升开发效率的 VSCode 扩展，让你编码快如闪电！",
+  "repository": {
+    "type": "git",
+    "url": "https://192.168.8.218:10080/fanbj/lego-helper.git"
+  },
+  "icon": "images/logo.png",
+  "version": "0.0.3",
+  "publisher": "Bener",
+  "engines": {
+    "vscode": "^1.27.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets-javascript.code-snippets"
+      },
+      {
+        "language": "jade",
+        "path": "./snippets/snippets-jade.code-snippets"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/snippets-vue.code-snippets"
+      }
+    ]
+  }
+}
